@@ -26,6 +26,9 @@
    * Russian: Native Speaker<br>
    * English: B1<br>
   
+# BRIF INFORMATION ABOUT YOURSELF<br>
+  At the moment my goal is to finish R.S.School. Information about me will be updated.
+ 
 # EXPERIENCE <h3>
   Currently no experience in the field of front-end
   
