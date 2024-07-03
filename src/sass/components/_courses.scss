@@ -1,0 +1,47 @@
+.courses {
+  &__list {
+    font-family: 'Quicksand-Medium';
+    list-style: none;
+    color: $color-link;
+  }
+  &__item {
+    margin-bottom: 15px;
+    margin-left: 15px;
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background-color: $color-link;
+      width: 5px;
+      height: 5px;
+      left: -12px;
+      top: 11px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $color-bg;
+    position: relative;
+    @media (hover: hover) {
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 1px;
+      background-color: $color-bg;
+      @extend %transition-hover;
+    }
+  }
+}

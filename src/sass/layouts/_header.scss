@@ -1,0 +1,13 @@
+.header {
+  position: sticky;
+  background-color: $color-bg;
+  top: 0;
+  z-index: 100;  
+  &__wrapper {
+    padding-top: 20px;
+    @include media-tablet {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

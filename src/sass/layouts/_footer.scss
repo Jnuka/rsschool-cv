@@ -1,0 +1,41 @@
+.footer {
+  background-color: $color-basic;
+  font-family: 'Quicksand-Medium';
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+  }
+  &__info {
+    display: flex;
+    gap: 10px;
+    @include media-mobile {
+      @include font ($size: 1.5rem, $height: 2.0rem, $weight: 500);   
+    }
+  }
+  &__link {
+    display: block;
+    color: $color-link;
+    text-decoration: none;
+    @extend %transition;
+    @media (hover:hover) {
+      &:hover {
+        color: $color-add;
+        .footer__img {
+          filter: invert(100%);
+        }
+      }
+    }
+  }
+  &__img {
+    width: 150px;
+    @extend %transition;    
+    @include media-tablet {
+      width: 130px;
+    }
+    @include media-mobile {
+      width: 90px;
+    }
+  }
+}
