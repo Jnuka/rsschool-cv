@@ -1,0 +1,193 @@
+.contact {
+  &__wrapper {
+    @include media-mobile-600 {
+      padding: 0 30px;
+    }
+    @include media-mobile-400 {
+      padding: 0 20px;
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 26% 70%;
+    gap: 45px;
+    @include media-tablet {
+      gap: 10px;
+    }
+    @include media-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__about {
+    background-color: $color-column1;
+    padding: 0 10px 0 30px;
+    color: $color-muted-white;
+    @include font ($size: 1.8rem, $height: 2.8rem, $weight: 400);   
+    @include media-tablet {
+      @include font ($size: 1.6rem, $height: 2.8rem, $weight: 400);   
+      padding: 0 10px 40px 10px;
+    }
+    @include media-mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 30px;
+      padding-left: 120px;
+    }
+    @include media-mobile-600 {
+      grid-template-columns: repeat(1, 1fr);
+      padding-left: 20px;
+    }
+  }
+  &__about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 68px;
+  }
+  &__title {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 1px;
+      background-color: $color-white;
+      left: 2px;
+      bottom: -5px;
+    }
+  }
+  &__brif-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 68px;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    span {
+      font-family: 'Quicksand-Bold';
+      margin-right: 5px;
+    }
+  }
+  &__educations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 68px;
+    @include media-mobile {
+      padding-right: 75px;
+    }
+  }
+  &__education {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__date {
+    font-family: 'Quicksand-Bold';
+    color: rgba($color-white, 0.8);
+  }
+  &__languages {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 68px;
+    span {
+      font-family: 'Quicksand-Bold';
+    }
+  }
+  &__language {
+    list-style: none;
+  }
+  &__achievement {
+    padding: 0 0 0 30px;
+    .contact__title {
+      color: $color-link;
+      &::after {
+        background-color: $color-link;
+      }
+    }
+    @include media-mobile {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    @include media-mobile-600 {
+      padding: 0;
+    }
+  }
+  &__skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 68px;
+  }
+  &__courses {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 68px;
+  }
+  &__interests {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 68px;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 130px);
+    align-items: center;
+    gap: 15px;
+    @include media-tablet {  
+      grid-template-columns: repeat(4, 100px);    
+      gap: 10px;
+    }
+    @include media-mobile {
+      grid-template-columns: repeat(4, 130px);
+      justify-content: center;
+    }
+    @include media-mobile-600 {
+      grid-template-columns: repeat(2, 90px);
+    }
+  }
+  &__interest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    @extend %transition;
+    @media (hover: hover) {
+      &:hover {
+        filter: invert(15%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+      }
+    }
+  }
+  &__code{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 68px;
+    @include media-mobile-600 {
+      @include font ($size: 1.6rem, $height: 2.8rem, $weight: 500);   
+    }
+    @include media-mobile-400 {
+      @include font ($size: 1.3rem, $height: 2.8rem, $weight: 500);   
+    }
+  }
+  &__project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 68px;
+  }
+}

@@ -1,0 +1,51 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 0;
+  font-family: 'Quicksand-Medium';
+  @include media-tablet {
+    flex-direction: column;
+    padding: 79px 9px 0 10px;
+    @include font($size: 3.2rem, $height: 4.0rem, $weight: 500);    
+  }
+  &__item {
+    list-style: none;
+    padding-bottom: 20px;
+    cursor: pointer;  
+    position: relative;    
+    @include media-tablet {
+      padding-bottom: 20px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 12px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, $color-bg, $color-link);
+      @extend %transition-hover;
+    }
+    @media (hover: hover) {
+      &:hover {
+        .navigation__link {
+          color: $color-white;
+        }
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__link {
+    color: $color-link;
+    text-decoration: none;
+    padding: 15px;
+    @extend %transition; 
+    @include media-tablet {
+      padding: 15px;
+    }
+  }
+}
