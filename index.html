@@ -279,9 +279,9 @@
               </h2>
               <pre class="contact__code-pre"><code>function myLanguages(results) {
   return Object.entries(results)
-    .filter((entry) => entry[1] >= 60)
-    .sort((a,b) => b[1] - a[1])
-    .map((languages) => languages[0]);  
+    .filter((entry) =&gt; entry[1] &gt;= 60)
+    .sort((a,b) =&gt; b[1] - a[1])
+    .map((languages) =&gt; languages[0]);  
 }</code></pre>
             </div>
 
