@@ -13,6 +13,7 @@
     }
     @include media-mobile-600 {
       grid-template-columns: repeat(2, 100px);
+      gap: 10px 30px;
     }
   }
   &__item {
