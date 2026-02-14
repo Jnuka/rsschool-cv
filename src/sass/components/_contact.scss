@@ -121,6 +121,12 @@
       padding: 0;
     }
   }
+  &__brief {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 68px;
+  }
   &__skills {
     display: flex;
     flex-direction: column;
