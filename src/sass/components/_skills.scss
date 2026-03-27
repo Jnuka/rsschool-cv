@@ -1,0 +1,59 @@
+.skills {  
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 130px);
+    gap: 10px;
+    @include media-tablet {  
+      grid-template-columns: repeat(4, 100px);    
+      gap: 0;
+    }
+    @include media-mobile {
+      grid-template-columns: repeat(4, 130px);
+      justify-content: center;
+    }
+    @include media-mobile-600 {
+      grid-template-columns: repeat(2, 100px);
+      gap: 10px 30px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (hover: hover) {
+      &:hover {
+        .skills__text {
+          opacity: 1;
+          transform: scale(1);
+        }
+        .skills__icon {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+  &__text {
+    color: $color-link;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    @extend %transition;
+    @include media-mobile-790 {
+      @media (hover: none) {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+  &__icon {
+    filter: grayscale(1);
+    width: 80px;
+    height: 80px;
+    @extend %transition;
+    @include media-mobile-790 {
+      @media (hover: none) {
+        filter: grayscale(0);
+      }
+    }
+  }
+}

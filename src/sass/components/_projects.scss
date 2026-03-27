@@ -1,0 +1,65 @@
+.projects {
+  margin-bottom: 20px;
+  &__project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $color-link;
+    & + & {
+      padding-top: 30px;
+    }
+    &:last-child {
+      border-bottom: none
+    }
+    @include media-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+    @include media-tablet {
+      gap: 30px;
+    }    
+  }
+  &__title {
+    font-family: 'Quicksand-Bold';
+    @include font ($size: 2.0rem, $height: 2.8rem);   
+  }
+  &__description {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Quicksand-Medium';
+    @include font ($size: 1.4rem, $height: 2.5rem, $weight: 500);   
+  }
+  &__text {
+    list-style: none;
+  }
+  &__link {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    @include media-tablet {
+      display: flex;
+    }
+  }
+  &__img {
+    width: 100%;
+    border: 1px solid $color-link;
+    box-sizing: border-box;
+    @extend %transition;
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 5px 2px 8px 2px $color-basic;
+      }
+    }
+    @include media-tablet {
+      width: 80%;
+    }
+    @include media-mobile {
+      width: 100%;
+    }
+  }
+}
